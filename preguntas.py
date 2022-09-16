@@ -1,5 +1,5 @@
 import random
-class cuestionador:
+class Cuestionador:
 
     def __init__(self):
     
@@ -11,7 +11,7 @@ class cuestionador:
         self.answers=  [
             "circulo imaginario en esfera celeste",
             "90 grados respecto al horizonte",
-            12 
+            "12"
         ]
 
     def jugar (self):
@@ -19,3 +19,11 @@ class cuestionador:
         n=len(self.questions)
         number= random.randint(0, n-1)
         print(self.questions[number])
+        #Solicitar la respuesta al usuario
+        respuesta= input ("¿cual es tu respuesta?")
+        #Verificar si la respuesta es correcta
+
+        if respuesta == self.answers[number]:
+            print("eres genial")
+        else:
+            print ("perdio")
